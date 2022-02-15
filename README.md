@@ -20,4 +20,5 @@ This is a sample work to demonstrate Three.js. This POC is based on [this projec
 1. [Three.js - Documentation](https://threejs.org/docs/index.html#manual/en/introduction/Creating-a-scene)
 2. [Example Projects](https://threejs.org/examples/#webgl_animation_keyframes)
 3. [Three.JS Boilerplate](https://github.com/paulmg/ThreeJS-Webpack-ES6-Boilerplate)
-4. [3D-Car-Model](https://santosharron.github.io/3D-car-model/)
+4. [Beginner's Guide - Medium](https://medium.com/@benjamin.c.coleman/the-beginners-guide-to-beginning-three-js-c36b8947c2aa)
+5. [3D-Car-Model](https://santosharron.github.io/3D-car-model/)
