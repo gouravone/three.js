@@ -2,15 +2,24 @@
 const backgroundColor = '0xdddddd';
 
 /*////////////////////////////////////////*/
+var isAmbient = false
+let turnOnLight = false
+let ambientcolor = 0x20202A
 
 var renderCalls = [];
 function render() {
     requestAnimationFrame(render);
     renderCalls.forEach((callback) => { callback(); });
+    let click = document.getElementById('click')
+    click.onclick = () => LightturnOn()
+
 }
 render();
 
-/*////////////////////////////////////////*/
+/**
+ * We need to create the scene,
+ * before loading our 3d models
+ */
 
 var scene = new THREE.Scene();
 
@@ -38,7 +47,11 @@ document.body.appendChild(renderer.domElement);
 function renderScene() { renderer.render(scene, camera); }
 renderCalls.push(renderScene);
 
-/* ////////////////////////////////////////////////////////////////////////// */
+/**
+ * OrbitControls handeler enables,
+ * drag and rotate our 3D model,
+ * 360 degree
+ */
 
 var controls = new THREE.OrbitControls(camera);
 
@@ -59,24 +72,34 @@ renderCalls.push(function () {
 });
 
 
-/* ////////////////////////////////////////////////////////////////////////// */
+/**
+ * 
+ * @param {LightturnOn} params 
+ * The methods adds PointLight & AmbientLight
+ */
+
+function LightturnOn(params) {
+    isAmbient = !isAmbient
+    if(isAmbient && !turnOnLight){
+        var light = new THREE.PointLight('0xff0000', 5, 100);
+        light.position.set(4, 30, -20);
+        scene.add(light);
+        
+        var light2 = new THREE.AmbientLight(ambientcolor, 20, 100);
+        light2.position.set(30, -10, 30);
+        scene.add(light2);
+        turnOnLight = true
+    }
+}
 
 
-var light = new THREE.PointLight('0xffffcc', 20, 100);
-light.position.set(4, 30, -20);
-scene.add(light);
-
-var light2 = new THREE.AmbientLight(0x20202A, 20, 100);
-light2.position.set(30, -10, 30);
-scene.add(light2);
-
-/* ////////////////////////////////////////////////////////////////////////// */
-
-
+/**
+ * Below code, loads our 3D model and add to our created scene
+*/
 
 var loader = new THREE.GLTFLoader();
 loader.crossOrigin = true;
-loader.load('aventador.gltf', function (data) {
+loader.load('./Models/aventador.gltf', function (data) {
     var object = data.scene;
     object.scale.set(1,1,1);
     object.position.set(0, 0, 0);
