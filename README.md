@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="https://blog.logrocket.com/wp-content/uploads/2020/12/threejs-geometries-materials.png" width="350" title="hover text">
+</p>
+
 # Three.js - Javascript 3D Library
 
 This is a sample work to demonstrate Three.js.
