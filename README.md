@@ -4,7 +4,7 @@
 
 # Three.js - Javascript 3D Library
 
-This is a sample work to demonstrate Three.js.
+This is a sample work to demonstrate Three.js. This POC is based on [this project](https://github.com/santosharron/3D-car-model).
 
 # Getting Started
 
@@ -19,3 +19,5 @@ This is a sample work to demonstrate Three.js.
 # Reference
 1. [Three.js - Documentation](https://threejs.org/docs/index.html#manual/en/introduction/Creating-a-scene)
 2. [Example Projects](https://threejs.org/examples/#webgl_animation_keyframes)
+3. [Three.JS Boilerplate](https://github.com/paulmg/ThreeJS-Webpack-ES6-Boilerplate)
+4. [3D-Car-Model](https://github.com/santosharron/3D-car-model)
