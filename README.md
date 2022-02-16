@@ -4,7 +4,7 @@
 
 # Three.js - Javascript 3D Library
 
-This is a sample work to demonstrate Three.js. This POC is based on [this project](https://github.com/santosharron/3D-car-model).
+This is a sample work to demonstrate Three.js. [Live Demo](https://gouravone.github.io/three.js/).
 
 # Getting Started
 
