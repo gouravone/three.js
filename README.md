@@ -4,7 +4,7 @@
 
 # Three.js - Javascript 3D Library
 
-This is a sample work to demonstrate Three.js. [Live Demo](https://gouravone.github.io/three.js/).
+This is a sample work to demonstrate Three.js. Check [Live Demo](https://gouravone.github.io/three.js/).
 
 # Getting Started
 
